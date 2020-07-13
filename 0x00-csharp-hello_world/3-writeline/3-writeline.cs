@@ -1,7 +1,5 @@
 using System;
-/// <summary>
-/// print statement
-/// </summary>
+
 class Program
 {
     static void Main(string[] args)
