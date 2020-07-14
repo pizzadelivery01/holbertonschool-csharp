@@ -2,12 +2,11 @@
 
 class Program
 {
-    
     static void Main(string[] args)
     {
-        for (char letter = "a"; letter <= "z"; letter++)
-        {
-            Console.Write(letter);
-        }
+     for (int i = 0; i < 26; i++)
+            {
+                Console.Write(Convert.ToChar(i + (int)'a');
+            }   
     }
 }
