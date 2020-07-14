@@ -29,5 +29,6 @@ class Program
                     Console.WriteLine("The last digit of {0} is {1} and is greater than 5", number, last);
                 }
             }
+        }
     }
 }
