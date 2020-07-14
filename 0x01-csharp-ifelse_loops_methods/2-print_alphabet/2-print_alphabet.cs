@@ -5,11 +5,9 @@ class Program
     
     static void Main(string[] args)
     {
-        char letter = "a";
-        while (letter <= "z")
+        for (char letter = "a"; letter <= "z"; letter++)
         {
             Console.Write(letter);
-            letter++;
         }
     }
 }
