@@ -4,15 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        for(int i =0; i <= 9; i++)
+        for(int i =0; i <= 99; i++)
         {
-            int first = i;
-            for(int j = 0; j <= 9; j++)
-            {
-                int second = j;
-                Console.Write("{0}{1}, ", first, second);
-            }
+            if(i != 99)
+                Console.Write("{0:00}, ", i);
+            else
+                Console.Write("{0:00\n}", i);
         }
-        Console.WriteLine("99");
     }
 }
