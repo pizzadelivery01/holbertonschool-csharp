@@ -29,7 +29,7 @@ class List
                 myList.Add(item);
             }
         }
-        myList.sort();
+        myList.Sort();
         return myList;
     }
 }
