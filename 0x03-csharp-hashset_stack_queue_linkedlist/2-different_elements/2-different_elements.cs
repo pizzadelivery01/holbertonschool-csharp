@@ -6,30 +6,26 @@ class List
     public static List<int> DifferentElements(List<int> list1, List<int> list2)
     {
         List<int> myList = new List<int>();
-        int i = 0;
-        int j = 0;
-        while(i < list1.Count)
+        foreach (int item in list1)
         {
-            if(list2.Contains(list1[i]))
+            if(list2.Contains(item))
             {
-                i++;
+                continue;
             }
             else
             {
-                myList.Add(list1[i]);
-                i++;
+                myList.Add(item);
             }
         }
-        while(j < list2.Count)
+        foreach (int item in list2)
         {
-            if(list1.Contains(list2[j]))
+            if(list1.Contains(item))
             {
-                j++;
+                continue;
             }
             else
             {
-                myList.Add(list2[j]);
-                j++;
+                myList.Add(item);
             }
         }
         myList.sort();
