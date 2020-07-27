@@ -31,6 +31,7 @@ class List
                 j++;
             }
         }
+        myList.sort();
         return myList;
     }
 }
