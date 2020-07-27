@@ -4,11 +4,11 @@ class LList
 {
     public static void Delete(LinkedList<int> myLList, int index)
     {
-        
-        LinkedListNode<int> index = myLList.First;
-        for ( int i = 0; i < index && index.Next != null; i++)
-            index = index.Next;
+        int i = 0;
+        LinkedListNode<int> pointer = myLList.First;
+        for (; i < index && pointer.Next != null; i++)
+            pointer = pointer.Next;
         if (i == index)
-            myLList.Remove(index);
+            myLList.Remove(pointer);
     }
 }
