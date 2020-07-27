@@ -6,6 +6,7 @@ class List
     {
         List<int> myList = new List<int>();
         int i = 0;
+        int j = 0;
         while(i < list1.Count)
         {
             if(list2.Contains(list1[i]))
@@ -18,16 +19,16 @@ class List
                 i++;
             }
         }
-        while(i < list2.Count)
+        while(j < list2.Count)
         {
-            if(list1.Contains(list2[i]))
+            if(list1.Contains(list2[j]))
             {
-                i++;
+                j++;
             }
             else
             {
-                myList.Add(list2[i]);
-                i++;
+                myList.Add(list2[j]);
+                j++;
             }
         }
         return myList;
