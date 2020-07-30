@@ -8,31 +8,35 @@ namespace Enemies
     public class Zombie
     {
         /// <summary>
-        /// health of zombie.
+        /// Gets or sets health of zombie.
         /// </summary>
-        public int health {get; set;}
+        private int health;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Zombie"/> class.
+        /// Initializes a new instance of the Zombie class.
         /// </summary>
         public Zombie()
         {
             health = 0;
         }
         /// <summary>
-        /// Sets health of zombie to value
+        /// Initializes a new instance of the Zombie class
         /// </summary>
-        /// <param name="value"></param>
+        /// <param name="value">zombies health</param>
         public Zombie(int value)
         {
-            if(value < 0)
-            {
+             if (value < 0)
                 throw new ArgumentException("Health must be greater than or equal to 0");
-            }
             else
-            {
                 health = value;
-            }
+        }
+        /// <summary>
+        /// Gets health of Zombie
+        /// </summary>
+        /// <returns>health of zombie</returns>
+        public int GetHealth()
+        {
+            return health;
         }
     }
 }
