@@ -48,5 +48,8 @@ namespace Enemies
         /// </summary>
         /// <value>name of zombie for setter</value>
         public string Name {get => name; set => value;}
+        {
+            
+        }
     }
 }
