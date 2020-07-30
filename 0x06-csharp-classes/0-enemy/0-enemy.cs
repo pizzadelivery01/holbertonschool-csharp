@@ -6,7 +6,7 @@ namespace Enemies
     ///  Represents an enemy zombie class
     /// </summary>
     public class Zombie
-    {
+        {
 
-    }
+        }
 }
