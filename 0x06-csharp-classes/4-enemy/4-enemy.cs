@@ -45,7 +45,7 @@ namespace Enemies
         /// <summary>
         /// Gets or sets the name of zombie
         /// </summary>
-        public string name  {get; set;}
+        public string name  {get => name; set => value;}
         
     }
 }
