@@ -14,7 +14,7 @@ namespace Enemies
         /// <summary>
         /// name of zombie
         /// </summary>
-        /// <param name="name">name of zombie</param>
+        /// <param name="No name">name of zombie</param>
         private string name = "(No name)";
 
         /// <summary>
