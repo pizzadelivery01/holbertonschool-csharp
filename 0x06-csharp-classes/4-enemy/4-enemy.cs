@@ -11,9 +11,6 @@ namespace Enemies
         /// Gets or sets health of zombie.
         /// </summary>
         private int health;
-        /// <summary>
-        /// zombie name
-        /// </summary>
         private string name = "(No name)";
 
         /// <summary>
@@ -43,9 +40,9 @@ namespace Enemies
             return health;
         }
         /// <summary>
-        /// Gets or sets the name of zombie
+        /// Gets or Sets zombie name
         /// </summary>
-        public string name  {get => name; set => value;}
-        
+        /// <value>name of zombie for setter</value>
+        public string Name {get => name; set => value;}
     }
 }
