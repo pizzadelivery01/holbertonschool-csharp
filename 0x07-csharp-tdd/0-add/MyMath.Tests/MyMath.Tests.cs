@@ -37,5 +37,12 @@ namespace MyMath.Tests
                 int result = Operations.Add(-6, -4);
                 Assert.AreEqual(-10, result);
             }
+        [TEST]
+        public void ArgumenterrTest()
+        {
+            string error = "err";
+            Assert.Throws(typeof(ArgumentException),
+                new TestDelegate(Operations.Add(error, 4)));
+        }
     }
 }
