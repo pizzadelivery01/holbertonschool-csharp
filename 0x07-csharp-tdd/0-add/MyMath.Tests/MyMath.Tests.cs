@@ -1,5 +1,4 @@
 using NUnit.Framework;
-using MyMath;
 
 namespace MyMath.Tests
 {
@@ -10,39 +9,16 @@ namespace MyMath.Tests
     public class OperationsTests
     {
         /// <summary>
-        /// test two positive
+        /// test two ints added
         /// </summary>
         [Test]
-        public void PositivesTests()
-        {
-            int result = Operations.Add(6, 4);
-            Assert.AreEqual(10, result);
-        }
-        /// <summary>
-        /// tests if one negative
-        /// </summary>
-        /// <value></value>
-        [TEST]
-        public void OneNegativeTests()
+        public void Add_TwoIntsAdded_ReturnsSum(
+            [Values(1, 1000, -1000, 5)] int a,
+            [Values(0, -1000, -100, 10)] int b)
             {
-                int result = Operations.Add(5, -10);
-                Assert.AreEqual(-5, result);
+                var result = Operations.Add(a,b);
+
+                Assert.That(result == (a + b));
             }
-        /// <summary>
-        /// test two negatives
-        /// </summary>
-        [TEST]
-        public void BothNegativeTests()
-            {
-                int result = Operations.Add(-6, -4);
-                Assert.AreEqual(-10, result);
-            }
-        [TEST]
-        public void ArgumenterrTest()
-        {
-            string error = "err";
-            Assert.Throws(typeof(ArgumentException),
-                new TestDelegate(Operations.Add(error, 4)));
-        }
     }
 }
