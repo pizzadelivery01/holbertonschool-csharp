@@ -1,34 +1,33 @@
 ﻿using System;
 using System.Linq;
-using System.Text.RegularExpressions;
-using System.Collections.Generic;
 
 namespace Text
 {
     /// <summary>
-    /// class string 
+    /// Class for strings
     /// </summary>
     public class Str
     {
         /// <summary>
-        /// checks for palindromes
+        /// Checks if a palindrome
         /// </summary>
-        /// <param name="s">sting to check</param>
+        /// <param name="s">given string</param>
         /// <returns>bool</returns>
         public static bool IsPalindrome(string s)
         {
-            String reversed;
+            string reversed;
 
-            if (s is null)
-            {
-                return false;
-            }
-            var shortend = String.Join("", s.Where(char.IsLetterOrDigit));
-            char[] arr = shortend.ToCharArray();
+            if (s == null)
+                return (false);
+
+            var shortened = String.Join("", s.Where(char.IsLetterOrDigit));
+
+            char[] arr = shortened.ToCharArray();
+
             Array.Reverse(arr);
-            reversed = new String(arr);
+            reversed = new string(arr);
 
-            return reversed.Equals(s, StringComparison.OrdinalIgnoreCase);
+            return shortened.Equals(reversed, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

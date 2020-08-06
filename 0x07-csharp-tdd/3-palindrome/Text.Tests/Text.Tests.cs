@@ -38,5 +38,11 @@ namespace Text.Tests
             bool check = Str.IsPalindrome("Thhhht");
             Assert.IsTrue(check);
         }
+        [Test]
+        public void IsPalindrome_whenCommaAdded_returnsTrue()
+        {
+            bool check = Str.IsPalindrome("thhh,ht");
+            Assert.IsTrue(check);
+        }
     }
 }
