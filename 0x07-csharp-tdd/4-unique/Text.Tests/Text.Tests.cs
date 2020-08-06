@@ -21,7 +21,7 @@ namespace Text.Tests
         [Test]
         public void UniqueChar_whenUnique_returnsOne()
         {
-            string s = "hopethisworks";
+            string s = "hope";
             var result = Str.UniqueChar(s);
             Assert.AreEqual(1, result);
         }
