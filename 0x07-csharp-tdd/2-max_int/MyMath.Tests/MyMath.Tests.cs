@@ -22,7 +22,7 @@ namespace MyMath.Tests
             Assert.AreEqual(0, maxVal);
         }
         
-        [Test]
+       /** [Test]
         /// <summary>
         /// test when list is null
         /// </summary>
@@ -30,9 +30,9 @@ namespace MyMath.Tests
         {
             List<int> nums = null;
 
-            int max = Operations.Max(nums);
-            Assert.AreEqual(0, max);
-        }
+            int maxVal = Operations.Max(nums);
+            Assert.AreEqual(0, maxVal);
+        }*/
 
         [Test]
         /// <summary>
