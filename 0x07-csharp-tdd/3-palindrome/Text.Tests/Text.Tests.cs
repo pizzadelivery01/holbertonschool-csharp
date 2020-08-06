@@ -32,5 +32,11 @@ namespace Text.Tests
             bool check = Str.IsPalindrome(null);
             Assert.IsFalse(check);
         }
+        [Test]
+        public void IsPalindrome_whenCapitalandLower_returnsTrue()
+        {
+            bool check = Str.IsPalindrome("Thhhht");
+            Assert.IsTrue(check);
+        }
     }
 }
