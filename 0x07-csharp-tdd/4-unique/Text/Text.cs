@@ -15,6 +15,9 @@ namespace Text
         /// <returns>index or -1</returns>
         public static int UniqueChar(string s)
         {
+            int occurs = 0;
+            int n = 0;
+
             if (s is null)
             {
                 return -1;
@@ -23,20 +26,18 @@ namespace Text
             {
                 return -1;
             }
-            for (int i = 0; i < s.Length; i++)
+            foreach (var ch in s)
             {
-                if (i != (s.Length - 1) && s[i] == s[i + 1])
-                {
-                    continue;
+                for (int i = 0; i < s.Length; i++){
+                    if (s[i] == ch){
+                        occurs += 1;
+                    };
                 }
-                if (i == s.Length - 1)
-                {
-                    return -1;
+                if (occurs == 1){
+                    return n;
                 }
-                else
-                {
-                    return (i + 1);
-                }
+                occurs = 0;
+                n += 1;
             }
             return -1;
         }
