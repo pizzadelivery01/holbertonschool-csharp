@@ -16,7 +16,7 @@ namespace Text
         public static int UniqueChar(string s)
         {
             int occurs = 0;
-            int n = 0;
+            int n = 1;
 
             if (s is null)
             {
