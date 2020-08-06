@@ -26,5 +26,11 @@ namespace Text.Tests
             bool check = Str.IsPalindrome("");
             Assert.IsTrue(check);
         }
+        [Test]
+        public void IsPalindrome_whenNull_returnsFalse()
+        {
+            bool check = Str.IsPalindrome(null);
+            Assert.IsFalse(check);
+        }
     }
 }
