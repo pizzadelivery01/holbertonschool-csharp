@@ -32,5 +32,12 @@ namespace Text.Tests
             var result = Str.UniqueChar(s);
             Assert.AreEqual(-1, result);
         }
+        [Test]
+        public void UniqueChar_whenUniqueSecond_returnsOne()
+        {
+            string s = "hohpe";
+            var result = Str.UniqueChar(s);
+            Assert.AreEqual(2, result);
+        }
     }
 }
