@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 namespace Text
 {
@@ -17,7 +18,7 @@ namespace Text
         public static bool IsPalindrome(string s)
         {
             string reversed = new string(s.Reverse().ToArray());
-            return s.SequenceEqual(s);
+            return reversed.SequenceEqual(s);
         }
     }
 }

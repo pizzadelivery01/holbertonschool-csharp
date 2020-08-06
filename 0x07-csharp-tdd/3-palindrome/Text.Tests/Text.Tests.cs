@@ -9,22 +9,22 @@ namespace Text.Tests
         [Test]
         public void IsPalindrome_whenIsPalindrome_returnsTrue()
         {
-            bool isP = Str.IsPalindrome("race car");
-            Assert.IsTrue(isP);
+            bool check = Str.IsPalindrome("racecar");
+            Assert.IsTrue(check);
         }
 
         [Test]
         public void IsPalindrome_whenIsNotPalindrome_returnsFalse()
         {
-            bool isP = Str.IsPalindrome("this is not a plaindrome");
-            Assert.IsFalse(isP);
+            bool check = Str.IsPalindrome("this is not");
+            Assert.IsFalse(check);
         }
 
         [Test]
         public void IsPalindrome_whenStringEmpty_returnsTrue()
         {
-            bool isP = Str.IsPalindrome("");
-            Assert.IsTrue(isP);
+            bool check = Str.IsPalindrome("");
+            Assert.IsTrue(check);
         }
     }
 }
