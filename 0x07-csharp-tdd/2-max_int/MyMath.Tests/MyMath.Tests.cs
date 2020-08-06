@@ -22,17 +22,15 @@ namespace MyMath.Tests
             Assert.AreEqual(0, maxVal);
         }
         
-       /** [Test]
+        [Test]
         /// <summary>
         /// test when list is null
         /// </summary>
         public void Max_whenNumsIsNull_returnZero()
         {
             List<int> nums = null;
-
-            int maxVal = Operations.Max(nums);
-            Assert.AreEqual(0, maxVal);
-        }*/
+            Assert.AreEqual(0, Operations.Max(nums));
+        }
 
         [Test]
         /// <summary>
