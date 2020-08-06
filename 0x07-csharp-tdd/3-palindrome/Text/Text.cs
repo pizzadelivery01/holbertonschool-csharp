@@ -17,8 +17,18 @@ namespace Text
         /// <returns>bool</returns>
         public static bool IsPalindrome(string s)
         {
-            string reversed = new string(s.Reverse().ToArray());
-            return reversed.SequenceEqual(s);
+            String reversed;
+
+            if (s is null)
+            {
+                return false;
+            }
+            var shortend = String.Join("", s.Where(char.IsLetterOrDigit));
+            char[] arr = shortend.ToCharArray();
+            Array.Reverse(arr);
+            reversed = new String(arr);
+
+            return reversed.Equals(s, StringComparison.OrdinalIgnoreCase);
         }
     }
 }
