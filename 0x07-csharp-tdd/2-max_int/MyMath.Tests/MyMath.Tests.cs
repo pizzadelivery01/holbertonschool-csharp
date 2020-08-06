@@ -39,6 +39,7 @@ namespace MyMath.Tests
         public void Max_whenNums_returnMaxVal()
         {
             List<int> nums = new List<int>();
+            nums.Add(0);
             nums.Add(1);
             nums.Add(2);
             nums.Add(100);

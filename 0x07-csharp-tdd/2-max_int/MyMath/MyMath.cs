@@ -28,7 +28,7 @@ namespace MyMath
                 int max = 0;
                 foreach (var item in nums)
                 {
-                    if (item >= max)
+                    if (item > max)
                     {
                         max = item;
                     }
