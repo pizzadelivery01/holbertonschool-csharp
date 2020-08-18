@@ -63,12 +63,12 @@ class ImageProcessor
 			
 			for(int i = 0; i < rgbValues.Length - 2; i += 3)
 			{
-				int gray = ((rgbValues[i]) + (rgbValues[i + 1]) + (rgbValues[i + 2])) / 3;
+				int gray = ((rgbValues[i]) + (rgbValues[i + 1]) + (rgbValues[i + 2]));
                 rgbValues[i] = rgbValues[i + 1] = rgbValues[i + 2] = (byte) gray;
 			}
 			Marshal.Copy(rgbValues, 0, ptr, bytes);
 			bmp.UnlockBits(data);
-			bmp.Save(filename + "_greyscale" + extension);
+			bmp.Save(filename + "_grayscale" + extension);
 		});		
     }
 }
