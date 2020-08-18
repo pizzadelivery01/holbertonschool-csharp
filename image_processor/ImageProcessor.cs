@@ -128,7 +128,7 @@ class ImageProcessor
                 
                 Image img = bmp.GetThumbnailImage(width, height, null, IntPtr.Zero);
                 
-                img.Save($"{file}_th{extension}");
+                img.Save(filename + "_th" + extension);
             }
         });
     }
