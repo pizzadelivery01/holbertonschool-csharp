@@ -41,33 +41,3 @@ class ImageProcessor
 			});		
     }
 }
-/**	/// <summary>
-	/// inverts color scheme
-	/// </summary>
-	/// <param name="file">file</param>
-	public static void invert(object file)
-	{
-		string name = file.ToString();
-		int width;
-		int height;
-		string extension = "";
-		string filename = Path.GetFileNameWithoutExtension(name);
-
-		Bitmap bmp = new Bitmap(name);
-		width = bmp.Width;
-		height = bmp.Height;
-		extension = name.Substring(name.LastIndexOf("."));
-		
-		for (int x = 0; x < width; ++x)
-		{
-			for ( int y = 0; y < height; ++y)
-			{
-				Color inv = bmp.GetPixel(x,y);
-				int a = inv.A;
-				inv = Color.FromArgb(a, (255 - inv.R), (255 - inv.G), (255 - inv.B));
-				bmp.SetPixel(x, y, inv);
-			}
-		}
-		bmp.Save(filename + "_inverse" + extension);
-	}
-}*/
