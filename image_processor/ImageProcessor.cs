@@ -44,7 +44,8 @@ class ImageProcessor
 			for ( int y = 0; y < height; ++y)
 			{
 				Color inv = bmp.GetPixel(x,y);
-				inv = Color.FromArgb(255, (255 - inv.R), (255 - inv.G), (255 - inv.B));
+				int a = inv.A;
+				inv = Color.FromArgb(a, (255 - inv.R), (255 - inv.G), (255 - inv.B));
 				bmp.SetPixel(x, y, inv);
 			}
 		}
