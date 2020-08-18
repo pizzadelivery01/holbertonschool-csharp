@@ -45,11 +45,11 @@ class ImageProcessor
 			{
 				Color color = bmp.GetPixel(x,y);
 
-				/**int r = 255 - color.R;
-				int g = 255 - color.G;
-				int b = 255 - color.B;
-				int a = color.A;
-				*/
+				//int r = 255 - color.R;
+				//int g = 255 - color.G;
+				//int b = 255 - color.B;
+				//int a = color.A;
+				
 				color = Color.FromArgb(color.ToArgb()^0xffffff);
 				bmp.SetPixel(x, y, color);
 			}
