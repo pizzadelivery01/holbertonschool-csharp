@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Threading;
 using System.Threading.Tasks;
 using System.IO;
+using System.Runtime.InteropServices;
 
 
 class ImageProcessor
@@ -20,19 +22,20 @@ class ImageProcessor
 			string filename = Path.GetFileNameWithoutExtension(file);
 
 			Bitmap bmp = new Bitmap(file);
-			int width = bmp.Width;
-			int height = bmp.Height;
+			Rectangle rect = new Rectangle(0, 0, bmp.Width, bmp.Height);
+			BitmapData data = bmp.LockBits(rect, ImageLockMode.ReadWrite, bmp.PixelFormat);
 
-			for (int x = 0; x < width; ++x)
+			IntPtr ptr = data.Scan0;
+
+			int bytes = Math.Abs(data.Stride) * bmp.Height;
+			byte[] rgbValues = new byte[bytes];
+			Marshal.Copy(ptr, rgbValues, 0, bytes);
+			
+			for(int i = 0; i < rgbValues.Length; i++)
 			{
-				for ( int y = 0; y < height; ++y)
-				{
-					Color inv = bmp.GetPixel(x,y);
-					int a = inv.A;
-					inv = Color.FromArgb(a, (255 - inv.R), (255 - inv.G), (255 - inv.B));
-					bmp.SetPixel(x, y, inv);
-				}
+				rgbValues[i] = (byte) (255 - rgbValues[i]);
 			}
+			Marshal.Copy(ptr, rgbValues, 0, bytes);
 			bmp.Save(filename + "_inverse" + extension);
 			});		
     }
