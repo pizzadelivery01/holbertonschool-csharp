@@ -29,16 +29,13 @@ class ImageProcessor
 		int width;
 		int height;
 		string extension = "";
-		string filename = "";
+		string filename = Path.GetFileNameWithoutExtension(name);
 
 		Bitmap bmp = new Bitmap(name);
 		width = bmp.Width;
 		height = bmp.Height;
 		extension = name.Substring(name.LastIndexOf("."));
-		filename = name.Substring(name.LastIndexOf("/") + 1, name.Length - extension.Length - 7);
-
-		//Console.WriteLine(filename);
-		//Console.WriteLine(extension);
+		
 		for (int x = 0; x < width; ++x)
 		{
 			for ( int y = 0; y < height; ++y)
