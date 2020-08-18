@@ -116,4 +116,20 @@ class ImageProcessor
 			bmp.Save(filename + "_bw" + extension);
 		});	
 	}
+	public static void Thumbnail(string[] filenames, int height)
+    {
+        Parallel.ForEach(filenames, file =>
+        {
+            using (Bitmap image1 = new Bitmap(file))
+            {
+                string extension = Path.GetExtension(file);
+                string filename = Path.GetFileNameWithoutExtension(file);
+				int width = height * image1.Width / image1.Height;
+                
+                Image img = image1.GetThumbnailImage(width, height, null, IntPtr.Zero);
+                
+                img.Save($"{file}_th{extension}");
+            }
+        });
+    }
 }
