@@ -16,16 +16,12 @@ class ImageProcessor
     {
         Parallel.ForEach(filenames, file =>
 		{
-			string name = file.ToString();
-			int width;
-			int height;
-			string extension = "";
-			string filename = Path.GetFileNameWithoutExtension(name);
+			string extension = Path.GetExtension(file);
+			string filename = Path.GetFileNameWithoutExtension(file);
 
-			Bitmap bmp = new Bitmap(name);
-			width = bmp.Width;
-			height = bmp.Height;
-			extension = name.Substring(name.LastIndexOf("."));
+			Bitmap bmp = new Bitmap(file);
+			int width = bmp.Width;
+			int height = bmp.Height;
 
 			for (int x = 0; x < width; ++x)
 			{
