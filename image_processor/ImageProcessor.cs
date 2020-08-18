@@ -63,8 +63,9 @@ class ImageProcessor
 			
 			for(int i = 0; i < rgbValues.Length - 2; i += 3)
 			{
-				byte gray = (byte)((rgbValues[i] * 0.21) + (rgbValues[i + 1] * 0.71) + (rgbValues[i + 2] * 0.072));
-                rgbValues[i] = rgbValues[i + 1] = rgbValues[i + 2] = gray;
+				int gray = ((rgbValues[i]) + (rgbValues[i + 1]) + (rgbValues[i + 2]));
+				gray = gray / 3;
+                rgbValues[i] = rgbValues[i + 1] = rgbValues[i + 2] = (byte) gray;
 			}
 			Marshal.Copy(rgbValues, 0, ptr, bytes);
 			bmp.UnlockBits(data);
