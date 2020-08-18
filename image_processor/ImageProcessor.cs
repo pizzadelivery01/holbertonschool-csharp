@@ -120,13 +120,13 @@ class ImageProcessor
     {
         Parallel.ForEach(filenames, file =>
         {
-            using (Bitmap image1 = new Bitmap(file))
+            using (Bitmap bmp = new Bitmap(file))
             {
                 string extension = Path.GetExtension(file);
                 string filename = Path.GetFileNameWithoutExtension(file);
-				int width = height * image1.Width / image1.Height;
+				int width = height * bmp.Width / bmp.Height;
                 
-                Image img = image1.GetThumbnailImage(width, height, null, IntPtr.Zero);
+                Image img = bmp.GetThumbnailImage(width, height, null, IntPtr.Zero);
                 
                 img.Save($"{file}_th{extension}");
             }
