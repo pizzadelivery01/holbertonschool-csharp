@@ -43,15 +43,9 @@ class ImageProcessor
 		{
 			for ( int y = 0; y < height; ++y)
 			{
-				Color color = bmp.GetPixel(x,y);
-
-				//int r = 255 - color.R;
-				//int g = 255 - color.G;
-				//int b = 255 - color.B;
-				//int a = color.A;
-				
-				color = Color.FromArgb(color.ToArgb()^0xffffff);
-				bmp.SetPixel(x, y, color);
+				Color inv = bmp.GetPixel(x,y);
+				inv = Color.FromArgb(255, (255 - inv.R), (255 - inv.G), (255 - inv.B));
+				bmp.SetPixel(x, y, inv);
 			}
 		}
 		bmp.Save(filename + "_inverse" + extension);
