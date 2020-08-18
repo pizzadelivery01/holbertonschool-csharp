@@ -34,22 +34,26 @@ class ImageProcessor
 		Bitmap bmp = new Bitmap(name);
 		width = bmp.Width;
 		height = bmp.Height;
-		extension = name.Substring(name.IndexOf("."));
-		filename = name.Substring(name.IndexOf("/") + 1, name.Length - extension.Length);
+		extension = name.Substring(name.LastIndexOf("."));
+		filename = name.Substring(name.LastIndexOf("/") + 1, name.Length - extension.Length - 7);
 
+		//Console.WriteLine(filename);
+		//Console.WriteLine(extension);
 		for (int x = 0; x < width; ++x)
 		{
 			for ( int y = 0; y < height; ++y)
 			{
 				Color color = bmp.GetPixel(x,y);
 
-				int r = 255 - color.R;
+				/**int r = 255 - color.R;
 				int g = 255 - color.G;
 				int b = 255 - color.B;
 				int a = color.A;
-
-				bmp.SetPixel(x,y, Color.FromArgb(a,r,g,b));
+				*/
+				color = Color.FromArgb(color.ToArgb()^0xffffff);
+				bmp.SetPixel(x, y, color);
 			}
 		}
+		bmp.Save(filename + "_inverse" + extension);
 	}
 }
