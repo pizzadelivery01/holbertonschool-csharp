@@ -1,27 +1,22 @@
 ﻿using System;
 
-
 class VectorMath
 {
     /// <summary>
-	/// multiplies vector by scalar
-	/// </summary>
-	/// <param name="vector">vector</param>
-	/// <param name="scalar">scalar</param>
-	/// <returns></returns>
+    /// multiplies a vector by a scalar
+    /// </summary>
+    /// <param name="vector">vector</param>
+    /// <param name="scalar">scalar to multiply by</param>
+    /// <returns>vector</returns>
     public static double[] Multiply(double[] vector, double scalar)
     {
-        double[] x = new double[vector.Length];
 
-        if (vector.Length < 2 || vector.Length > 3)
+        if (vector.Length <= 3 && vector.Length >= 2)
         {
-            return new double[] { -1 };
+            for (int i = 0; i < vector.Length; i++)
+                vector[i] *= scalar;
+            return (vector);
         }
-        foreach (int i in vector)
-        {
-            x[i] = Math.Round((vector1[i] * scalar), 2);
-        }
-
-        return x;
+        return (new double[1]{-1});
     }
 }
