@@ -19,7 +19,7 @@ class MatrixMath
             {
                 for (int j = 0; j < len1; j++)
                 {
-                    matrix_ret[i, j] = matrix1[i, j] + matrix2[i, j];
+                    matrix_ret[i, j] = (matrix1[i, j] + matrix2[i, j]);
                 }
             }
             return matrix_ret;
