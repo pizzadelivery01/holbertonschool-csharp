@@ -14,14 +14,14 @@ class VectorMath
         {
             double x = 0;
 
-            if (vector.Length < 2 || vector.Length> 3)
+            if (vector.Length <= 3 && vector.Length > 1)
             {
-                return -1;
-            }
-            foreach (double item in vector)
-            {
-                x += Math.Pow(x, 2);
-            }
-            return Math.Round(Math.Sqrt(x), 2);
+            	foreach (double item in vector)
+            	{
+                	x += Math.Pow(x, 2);
+            	}
+            	return Math.Round(Math.Sqrt(x), 2);
+        	}
+			return -1;
         }
     }
