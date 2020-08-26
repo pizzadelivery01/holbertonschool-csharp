@@ -4,11 +4,11 @@
 class VectorMath
 {
     /// <summary>
-    /// multiplies two vectors
-    /// </summary>
-    /// <param name="vector1">vector 1</param>
-    /// <param name="vector2">vector 2</param>
-    /// <returns>vector</returns>
+	/// multiplies vector by scalar
+	/// </summary>
+	/// <param name="vector">vector</param>
+	/// <param name="scalar">scalar</param>
+	/// <returns></returns>
     public static double[] Multiply(double[] vector, double scalar)
     {
         double[] x = new double[vector.Length];
