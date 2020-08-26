@@ -10,7 +10,7 @@ class VectorMath
 	/// <returns>vector</returns>
     public static double DotProduct(double[] vector1, double[] vector2)
     {
-        double[] x = new double[vector.Length];
+        double x = 0;
 
         if (vector1.Length != vector2.Length || vector1.Length < 2 || vector1.Length > 3)
         {
@@ -19,7 +19,7 @@ class VectorMath
 
         for (int i = 0; i < vector1.Length; i++)
         {
-            x += vector1[i] * vector2[i];
+            x += (vector1[i] * vector2[i]);
         }
 
         return Math.Round(x, 2);
