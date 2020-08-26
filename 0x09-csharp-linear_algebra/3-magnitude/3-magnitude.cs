@@ -20,7 +20,6 @@ class VectorMath
             	{
                 	x += Math.Pow(x, 2);
             	}
-            	return Math.Round(Math.Sqrt(x), 2);
         	}
 			return -1;
         }
