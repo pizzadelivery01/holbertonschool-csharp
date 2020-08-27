@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// vector math
+/// </summary>
 class VectorMath
 {
     /// <summary>
