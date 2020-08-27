@@ -9,12 +9,12 @@ class VectorMath
     /// <summary>
 	/// cross mult two vectors
 	/// </summary>
-	/// <param name="vector1">vector</param>
-	/// <param name="vector2">vector</param>
+	/// <param name="vector1">vector1</param>
+	/// <param name="vector2">vector2</param>
 	/// <returns>vector</returns>
     public static double[] CrossProduct(double[] vector1, double[] vector2)
     {
-        double[] x;
+        double[] X = new double[3];
 		double[,] err = new double[,] {{-1}};
 
         if (vector1.Length == 3 && vector2.Length == 3)
@@ -26,6 +26,9 @@ class VectorMath
             };
             return (x);
         }
-        return (err);
+		else
+		{
+        	return (err);
+		}
     }
-}  
+}
