@@ -15,14 +15,17 @@ class MatrixMath
 
         if (matrix.GetLength(0) == 2 && matrix.GetLength(1) == 2)
         {
-            det = (matrix[0, 0] * matrix[1, 1]) - (matrix[0, 1] * matrix[1, 0]);
+            det = ((matrix[0, 0] * matrix[1, 1]) - (matrix[0, 1] * matrix[1, 0]));
             if (det == 0)
                 return (err);
-            double[,] x = new double[,] {
-                {(1 / det) * matrix[1, 1], (1 / det) * -matrix[0, 1]},
-                {(1 / det) * -matrix[1, 0], (1 / det) * matrix[0, 0]}
-            };
-            return (x);
+			else
+			{
+            	double[,] x = new double[,] {
+                	{(1 / det) * matrix[1, 1], (1 / det) * -matrix[0, 1]},
+                	{(1 / det) * -matrix[1, 0], (1 / det) * matrix[0, 0]}
+            	};
+            	return (x);
+			}
         }
         return (err);
     }
