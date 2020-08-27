@@ -15,7 +15,7 @@ class VectorMath
     public static double[] CrossProduct(double[] vector1, double[] vector2)
     {
         double[] X = new double[3];
-		double[,] err = new double[] {-1};
+		double[] err = new double[] {-1};
 
         if (vector1.Length == 3 && vector2.Length == 3)
         {
