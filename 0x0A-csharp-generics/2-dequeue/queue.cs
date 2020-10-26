@@ -77,7 +77,7 @@ public class Queue<T>
             Console.WriteLine("Queue is empty");
             return (default(T));
         }
-        T NedStark = head;
+        Node NedStark = head;
         head = NedStark.next;
         count -= 1;
         return (NedStark.value);
