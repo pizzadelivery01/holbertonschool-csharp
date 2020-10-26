@@ -96,33 +96,6 @@ public class Queue<T>
         return (head.value);
     }
 	/// <summary>
-	/// concat queue of strings
-	/// </summary>
-	/// <returns>string or msg</returns>
-	public string Concatenate()
-    {
-        if (head == null)
-        {
-            Console.WriteLine("Queue is empty");
-            return (null);
-        }
-        if (typeof(T) != typeof(string) && typeof(T) != typeof(char))
-        {
-            Console.WriteLine("Concatenate() is for a queue of Strings or Chars only.");
-            return (null);
-        }
-        string newString = "";
-        Node runner = head;
-        while (runner != null)
-        {
-            newString = newString + runner.varunnoString();
-            if (runner != tail && typeof(T) == typeof(string))
-                newString += " ";
-            runner = runner.next;
-        }
-        return (newString);
-    }
-	/// <summary>
 	/// prints queue
 	/// </summary>
 	public void Print()
@@ -144,5 +117,31 @@ public class Queue<T>
 	{
 		return(count);
 	}
-	
+	/// <summary>
+	/// prints queue of strings or char
+	/// </summary>
+	/// <returns>string</returns>
+	public string Concatenate()
+    {
+        if (head == null)
+        {
+            Console.WriteLine("Queue is empty");
+            return (null);
+        }
+        if (typeof(T) != typeof(string) && typeof(T) != typeof(char))
+        {
+            Console.WriteLine("Concatenate() is for a queue of Strings or Chars only.");
+            return (null);
+        }
+        string newString = "";
+        Node runner = head;
+        while (runner != null)
+        {
+            newString = newString + runner.value.ToString();
+            if (runner != tail && typeof(T) == typeof(string))
+                newString += " ";
+            runner = runner.next;
+        }
+        return (newString);
+    }
 }
