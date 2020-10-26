@@ -67,13 +67,9 @@ public class Queue<T>
 		}
 	}
 	/// <summary>
-	/// method to get count of queue
+	/// removes head node
 	/// </summary>
-	/// <returns>int count</returns>
-	public int Count()
-	{
-		return(count);
-	}
+	/// <returns>value of node</returns>
 	public T Dequeue()
     {
         if (head == null)
@@ -81,9 +77,18 @@ public class Queue<T>
             Console.WriteLine("Queue is empty");
             return (default(T));
         }
-        Node NedStark = head;
+        T NedStark = head;
         head = NedStark.next;
         count -= 1;
         return (NedStark.value);
     }
+	/// <summary>
+	/// method to get count of queue
+	/// </summary>
+	/// <returns>int count</returns>
+	public int Count()
+	{
+		return(count);
+	}
+	
 }
