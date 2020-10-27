@@ -179,7 +179,10 @@ class Objs<T> : IEnumerable<T>
 	{
         objs.Add(newObj);
     }
-	// you must also implement IEnumerable and IEnumerator(T) 
+	/// <summary>
+	/// you must also implement IEnumerable and IEnumerator(T)
+	/// </summary>
+	/// <returns>items</returns>
 	public IEnumerable<T> GetEnumerator()
 	{
 		foreach (var item in objs)
