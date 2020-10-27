@@ -64,7 +64,7 @@ public abstract class Base
 }
 class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
-	public string name {get; set;}
+	
 	/// <summary>
 	/// durability
 	/// </summary>
@@ -89,7 +89,7 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 	{
 
 	}
-	public boid Break()
+	public void Break()
 	{
 
 	}
