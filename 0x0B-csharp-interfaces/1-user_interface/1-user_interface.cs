@@ -44,7 +44,15 @@ interface ICollectable
 /// </summary>
 class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
+	/// <summary>
+	/// durability
+	/// </summary>
+	/// <value>int</value>
 	public int durability {get; set;}
+	/// <summary>
+	/// collected
+	/// </summary>
+	/// <value></value>
 	public bool isCollected {get; set;}
 	/// <summary>
 	/// interact
