@@ -2,7 +2,7 @@
 /// <summary>
 /// interface for interactive
 /// </summary>
-public interface IInteractive
+interface IInteractive
 {
 	/// <summary>
 	/// interact
@@ -12,7 +12,7 @@ public interface IInteractive
 /// <summary>
 /// interface for breakable
 /// </summary>
-public interface IBreakable
+interface IBreakable
 {
 	/// <summary>
 	/// durability
@@ -27,7 +27,7 @@ public interface IBreakable
 /// <summary>
 /// interface for collectable
 /// </summary>
-public interface ICollectable
+interface ICollectable
 {
 	/// <summary>
 	/// is item collected
