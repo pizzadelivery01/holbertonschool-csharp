@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Reflection;
+
 /// <summary>
 /// interface for interactive
 /// </summary>
@@ -161,7 +164,9 @@ class Key : Base, ICollectable
 		}
 	}
 }
-
+/// <summary>
+/// class roomobjescts
+/// </summary>
 public class RoomObjects
 {
     /// <summary>
