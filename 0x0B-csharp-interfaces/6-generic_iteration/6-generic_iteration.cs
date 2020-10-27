@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
+using System.Collections;
 
 /// <summary>
 /// interface for interactive
@@ -165,9 +165,9 @@ class Key : Base, ICollectable
 	}
 }
 /// <summary>
-/// list of generic obj
+/// Class implementing IEnumerable.
 /// </summary>
-/// <typeparam name="T">any type</typeparam>
+/// <typeparam name="T"></typeparam>
 class Objs<T> : IEnumerable<T>
 {
     List<T> objs = new List<T> ();
@@ -175,22 +175,17 @@ class Objs<T> : IEnumerable<T>
     /// <summary>
     /// Adds an object to the generic list.
     /// </summary>
-    public void Add(T newObj)
-	{
+    public void Add(T newObj) {
         objs.Add(newObj);
     }
-	/// <summary>
-	/// you must also implement IEnumerable and IEnumerator(T)
-	/// </summary>
-	/// <returns>items</returns>
-	public IEnumerable<T> GetEnumerator()
+
+	public IEnumerator<T> GetEnumerator()
 	{
-		foreach (var item in objs)
-		{
-			yield return item;			
-		}
+		for (int i = 0; i < objs.Count; i++)  
+        {  
+            yield return objs[i];  
+        }  
 	}
-	// you must also implement IEnumerable and IEnumerator(T)
 	IEnumerator IEnumerable.GetEnumerator()
 	{
 		return this.GetEnumerator();
