@@ -8,13 +8,13 @@ public abstract class Base
 	/// Name
 	/// </summary>
 	/// <value>string</value>
-	public string Name {get; set;}
+	public string name {get; set;}
 	/// <summary>
 	/// overridee ToString method
 	/// </summary>
 	/// <returns>string</returns>
 	public override string ToString()
 	{
-		return  (Name + " is a " + this.GetType().ToString());
+		return  (name + " is a " + this.GetType().ToString());
 	}
 }
