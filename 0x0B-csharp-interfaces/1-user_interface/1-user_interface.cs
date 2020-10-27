@@ -39,9 +39,7 @@ interface ICollectable
 	/// </summary>
 	void Collect();
 }
-/// <summary>
-/// Test Object
-/// </summary>
+
 
 /// <summary>
 /// Base class abstract
@@ -62,6 +60,9 @@ public abstract class Base
 		return  (name + " is a " + this.GetType().ToString());
 	}
 }
+/// <summary>
+/// Test Object
+/// </summary>
 class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
 	
@@ -83,14 +84,18 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 		
 	}
 	/// <summary>
+	/// break
+	/// </summary>
+	public void Break()
+	{
+
+	}
+	/// <summary>
 	/// collect
 	/// </summary>
 	public void Collect()
 	{
 
 	}
-	public void Break()
-	{
-
-	}
+	
 }
