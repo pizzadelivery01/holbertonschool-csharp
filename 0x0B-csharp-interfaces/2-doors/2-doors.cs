@@ -50,7 +50,7 @@ public abstract class Base
 	/// Name
 	/// </summary>
 	/// <value>string</value>
-	private string name {get; set;}
+	public string name {get; set;}
 	/// <summary>
 	/// overridee ToString method
 	/// </summary>
