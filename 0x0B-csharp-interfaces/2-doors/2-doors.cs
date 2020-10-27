@@ -60,12 +60,22 @@ public abstract class Base
 		return  (name + " is a " + this.GetType().ToString());
 	}
 }
+/// <summary>
+/// door class from base and interactive
+/// </summary>
 class Door : Base, IInteractive
 {
+	/// <summary>
+	/// Door constructor
+	/// </summary>
+	/// <param name="doorname">name</param>
 	public Door(string doorname = "Door")
 	{
 		name = doorname;
 	}
+	/// <summary>
+	/// interact method
+	/// </summary>
 	public void Interact()
 	{
 		Console.WriteLine($"You try to open the {name}. It's locked.");
