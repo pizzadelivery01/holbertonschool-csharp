@@ -10,6 +10,8 @@ public enum Modifier
 	/// <summary>Strong modifier</summary>
 	Strong = 3
 }
+/// <summary> delegate to health calculator</summary>
+delegate void CalculateHealth(float health);
 /// <summary> delegate to calculate modifiers</summary>
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
 
