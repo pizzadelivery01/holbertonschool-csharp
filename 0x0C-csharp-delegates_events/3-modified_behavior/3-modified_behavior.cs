@@ -1,12 +1,16 @@
 ﻿using System;
 
-enum Modifier
+/// <summary>heath modifier</summary>
+public enum Modifier
 {
+	/// <summary>weak modifier</summary>
 	Weak = 1,
+	/// <summary>Base Value</summary>
 	Base = 2,
+	/// <summary>Strong modifier</summary>
 	Strong = 3
 }
-
+/// <summary> delegate to calculate modifiers</summary>
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
 
 ///<summary>Player class</summary>
