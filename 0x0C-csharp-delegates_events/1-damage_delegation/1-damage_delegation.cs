@@ -29,18 +29,18 @@ public class Player
 	 ///<summary>Calculates Player damage.</summary>
     public void TakeDamage(float damage)
     {
-        Console.WriteLine($"{this.name} takes {damage} damage!");
-        if (damage < 0f)
+		if (damage < 0f)
             damage = 0f;
+        Console.WriteLine($"{this.name} takes {damage} damage!");
         float newHp = this.hp - damage;
     }
 
     ///<summary>Calculates Player healing.</summary>
     public void HealDamage(float heal)
     {
-        Console.WriteLine($"{this.name} heals {heal} HP!");
-        if (heal < 0f)
+		if (heal < 0f)
             heal = 0f;
+        Console.WriteLine($"{this.name} heals {heal} HP!");
         float newHp = this.hp + heal;
     }
 }
