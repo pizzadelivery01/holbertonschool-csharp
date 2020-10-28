@@ -32,6 +32,7 @@ public class Player
         Console.WriteLine($"{this.name} takes {damage} damage!");
         if (damage < 0f)
             damage = 0f;
+        float newHp = this.hp - damage;
     }
 
     ///<summary>Calculates Player healing.</summary>
@@ -40,5 +41,6 @@ public class Player
         Console.WriteLine($"{this.name} heals {heal} HP!");
         if (heal < 0f)
             heal = 0f;
+        float newHp = this.hp + heal;
     }
 }
