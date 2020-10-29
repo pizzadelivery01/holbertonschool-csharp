@@ -80,9 +80,14 @@ public class Player
 		if (newHP < 0)
 			this.hp = 0;
 		else if (newHP > this.maxHp)
+		{
 			this.hp = this.maxHp;
+		}
 		else
-			HPCheck(this, new CurrentHPArgs(this.hp));
+			{
+				this.hp = newHP;
+				HPCheck(this, new CurrentHPArgs(this.hp));
+			}
 	}
 	/// <summary>Applies modifier to health</summary>
 	public float ApplyModifier(float baseValue, Modifier modifier)
