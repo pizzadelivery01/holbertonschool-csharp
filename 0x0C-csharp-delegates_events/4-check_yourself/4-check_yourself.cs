@@ -77,8 +77,8 @@ public class Player
 	/// <summary> Validates HP within scale</summary>
 	public void ValidateHP(float newHP)
 	{
-		if (newHP < 0)
-			this.hp = 0;
+		if (newHP < 0f)
+			this.hp = 0f;
 		else if (newHP > this.maxHp)
 		{
 			this.hp = this.maxHp;
